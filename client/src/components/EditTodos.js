@@ -7,7 +7,7 @@ const EditTodos = ({ todo }) => {
   const updateDescription = async (e) => {
     e.preventDefault();
     try {
-      await todoAPI.put(`/${todo.todo_id}`, {
+      await todoAPI.put(`/todos/${todo.todo_id}`, {
         description,
       });
 

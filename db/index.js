@@ -1,4 +1,6 @@
-const { Pool } = require('pg');
+const { Pool, Client } = require('pg');
+
+const connectionString = process.env.DATBASE_URL;
 
 const pool = new Pool();
 

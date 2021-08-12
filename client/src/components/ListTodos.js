@@ -8,7 +8,7 @@ const ListTodos = () => {
   // Delete todo function
   const deleteTodo = async (id) => {
     try {
-      await todoAPI.delete(`/${id}`);
+      await todoAPI.delete(`/todos/${id}`);
 
       setTodos([...todos.filter((todo) => todo.todo_id !== id)]);
     } catch (err) {
@@ -18,7 +18,7 @@ const ListTodos = () => {
 
   const getTodos = async () => {
     try {
-      const response = await todoAPI.get('/');
+      const response = await todoAPI.get('/todos');
 
       setTodos(response.data);
     } catch (err) {

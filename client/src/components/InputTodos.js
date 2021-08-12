@@ -7,7 +7,7 @@ const InputTodos = () => {
   const onSubmitForm = async (e) => {
     e.preventDefault();
     try {
-      await todoAPI.post('/', {
+      await todoAPI.post('/todos', {
         description,
       });
 
